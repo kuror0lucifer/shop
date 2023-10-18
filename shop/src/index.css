@@ -13,9 +13,40 @@ body {
   color: #222;
 }
 
+header {
+  position: relative;
+}
+
 header .logo {
   font-weight: 600;
   font-size: 20px;
+}
+
+header .shop-cart-btn {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart-btn:hover,
+header .shop-cart-btn.active {
+  color: #dc3d3d;
+  transform: scale(1.5);
+}
+
+header .shop-cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  min-height: 100px;
+  background-color: #fafafa;
+
+  -webkit-box-shadow: 3px 2px 6px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 3px 2px 6px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 3px 2px 6px 0px rgba(34, 60, 80, 0.2);
+
+  z-index: 1000;
 }
 
 header ul.nav {
