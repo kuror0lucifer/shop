@@ -7,6 +7,7 @@ export class Item extends Component {
         <img
           src={"./img/" + this.props.item.img}
           alt={this.props.item.category}
+          onClick={() => this.props.onShowItem(this.props.item)}
         />
         <h2>{this.props.item.title}</h2>
         <p>{this.props.item.desc}</p>
